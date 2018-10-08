@@ -22,12 +22,11 @@ public class Tc01_VerifyCreateAcountLinkClick extends GenericRegressionTesting {
 		testCaseName = "Tc01_VerifyCreateAcountLinkClick";
 
 		report.openReport();
-		extentTest = extentReports.startTest(testCaseName);		
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		report.closeReport(extentReports, extentTest, testCaseName);
+		report.closeReport();
 	}
 	
 	@Test

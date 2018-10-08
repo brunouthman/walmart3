@@ -36,12 +36,14 @@ public class Report extends GenericRegressionTesting {
 		
 		extentReports.loadConfig(new File(System.getProperty("user.dir")+Constants.EXTENT_CONFIG_XML));
 		
+		extentTest = extentReports.startTest(testCaseName);	
+		
 		return null;
 	}
 	
-	public static void closeReport(ExtentReports report, ExtentTest test, String testCaseName){
-			report.endTest(test);
-			report.flush();			
+	public static void closeReport(){
+			extentReports.endTest(extentTest);
+			extentReports.flush();			
 	}
 	
 	public static void writeErrorLogReport(Exception e) {

@@ -5,20 +5,39 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.WebElement;
 
-public class Tc15_VerifyCreateAcountCheckBoxTrue {
+import com.relevantcodes.extentreports.LogStatus;
+
+import br.com.walmart3.regression_testing.GenericRegressionTesting;
+
+public class Tc15_VerifyCreateAcountCheckBoxTrue extends GenericRegressionTesting {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		testCaseName = "tc15_VerifyCreateAcountCheckBoxTrue";
+
+		report.openReport();
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		report.closeReport();
 	}
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		
+		elementId = "news";
+		WebElement webElement = handleWindow.findElementById(elementId);
+				
+		assertEquals(true, webElement.isSelected());
+		
+		if (webElement.isSelected()) {
+			extentTest.log(LogStatus.PASS, testCaseName, "passed");
+		} else {
+			extentTest.log(LogStatus.FAIL, testCaseName, "failed");
+		}	
 	}
 
 }

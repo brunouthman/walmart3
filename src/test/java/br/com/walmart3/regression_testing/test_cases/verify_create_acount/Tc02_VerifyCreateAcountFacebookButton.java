@@ -19,12 +19,11 @@ public class Tc02_VerifyCreateAcountFacebookButton extends GenericRegressionTest
 		testCaseName = "tc02_VerifyCreateAcountFacebookButton";
 
 		report.openReport();
-		extentTest = extentReports.startTest(testCaseName);	
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		report.closeReport(extentReports, extentTest, testCaseName);
+		report.closeReport();
 	}
 
 	@Test

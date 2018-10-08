@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import com.relevantcodes.extentreports.LogStatus;
 
 import br.com.walmart3.classes_uteis.Constants;
+import br.com.walmart3.classes_uteis.User;
 import br.com.walmart3.regression_testing.GenericRegressionTesting;
 
 public class Tc03_VerifyCreateAcountEmptyName extends GenericRegressionTesting {
@@ -20,12 +21,11 @@ public class Tc03_VerifyCreateAcountEmptyName extends GenericRegressionTesting {
 		testCaseName = "tc03_VerifyCreateAcountEmptyName";
 
 		report.openReport();
-		extentTest = extentReports.startTest(testCaseName);	
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		report.closeReport(extentReports, extentTest, testCaseName);
+		report.closeReport();
 	}
 
 	@Test
@@ -48,7 +48,7 @@ public class Tc03_VerifyCreateAcountEmptyName extends GenericRegressionTesting {
 			extentTest.log(LogStatus.FAIL, testCaseName, "failed");
 		}		
 		
-		String text = Constants.USER_NAME;
+		String text = User.USER_NAME;
 		handleWindow.setTextToFieldById(elementId, text);
 	}
 

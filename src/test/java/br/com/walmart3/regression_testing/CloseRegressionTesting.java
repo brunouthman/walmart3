@@ -23,19 +23,18 @@ public class CloseRegressionTesting extends GenericRegressionTesting {
 	public static void setUpBeforeClass() throws Exception {
 		testCaseName = "CloseRegressionTesting";
 		report.openReport();
-		extentTest = extentReports.startTest(testCaseName);
+		report.closeReport();
+		extentTest.log(LogStatus.PASS, testCaseName, "passed");		
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		report.closeReport(extentReports, extentTest, testCaseName);
-		extentTest.log(LogStatus.PASS, testCaseName, "passed");
 
 	}
 
 	@Test
 	public void test() {
-		System.out.println("closing regression testing");
+
 	}
 
 }

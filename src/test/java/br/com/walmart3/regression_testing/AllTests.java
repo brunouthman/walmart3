@@ -5,12 +5,36 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc01_VerifyCreateAcountLinkClick;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc02_VerifyCreateAcountFacebookButton;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc03_VerifyCreateAcountEmptyName;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc04_VerifyCreateAcountEmptyEmail;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc05_VerifyCreateAcountEmptyCpfCnpj;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc06_VerifyCreateAcountEmptyTel;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc07_VerifyCreateAcountEmptyPass;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc08_VerifyCreateAcountEmptyConfirmPass;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc09_VerifyCreateAcountInvalidEmail;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc10_VerifyCreateAcountInvalidCpf;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc11_VerifyCreateAcountInvalidCnpj;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc12_VerifyCreateAcountInvalidTel;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc13_VerifyCreateAcountInvalidPwd;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc14_VerifyCreateAcountInvalidConfirPwd;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc15_VerifyCreateAcountCheckBoxTrue;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc16_VerifyCreateAcountCheckBoxFalse;
+import br.com.walmart3.regression_testing.test_cases.verify_create_acount.Tc17_VerifyCreateAcountUseTermsLink;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-	StartRegressionTesting.class,
-	CloseRegressionTesting.class,
-	Tc01_VerifyCreateAcountLinkClick.class})
+		StartRegressionTesting.class,
+		Tc01_VerifyCreateAcountLinkClick.class, Tc02_VerifyCreateAcountFacebookButton.class,
+		Tc03_VerifyCreateAcountEmptyName.class, Tc04_VerifyCreateAcountEmptyEmail.class,
+		Tc05_VerifyCreateAcountEmptyCpfCnpj.class, Tc06_VerifyCreateAcountEmptyTel.class,
+		Tc07_VerifyCreateAcountEmptyPass.class, Tc08_VerifyCreateAcountEmptyConfirmPass.class,
+		Tc09_VerifyCreateAcountInvalidEmail.class, Tc10_VerifyCreateAcountInvalidCpf.class,
+		Tc11_VerifyCreateAcountInvalidCnpj.class, Tc12_VerifyCreateAcountInvalidTel.class,
+		Tc13_VerifyCreateAcountInvalidPwd.class, Tc14_VerifyCreateAcountInvalidConfirPwd.class,
+		Tc15_VerifyCreateAcountCheckBoxTrue.class, Tc16_VerifyCreateAcountCheckBoxFalse.class,
+		Tc17_VerifyCreateAcountUseTermsLink.class, 
+		CloseRegressionTesting.class})
 public class AllTests {
 
 }

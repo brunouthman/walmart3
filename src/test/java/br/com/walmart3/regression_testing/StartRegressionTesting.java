@@ -50,7 +50,7 @@ public class StartRegressionTesting extends GenericRegressionTesting {
 	@AfterClass
 	public static void endTest() throws Exception {
 		testCaseName = "Initializing Regression Testing - close report";
-		report.closeReport(extentReports, extentTest, testCaseName);
+		report.closeReport();
 
 	}
 
